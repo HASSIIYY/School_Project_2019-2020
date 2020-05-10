@@ -7,8 +7,8 @@ namespace ClassLibraryProject
 {
     public class MarkerSpawn
     {
-        private static Ellipse[] Elements = new Ellipse[1000000];
-        public static void Tochka(float pointDiameter, float Distance, float Deg, int i)
+        public static Ellipse[] Elements = new Ellipse[1000000];
+        public static void Tochka(float pointDiameter, double Distance, float Deg, int i)
         {
             Ellipse NewEllipse = new Ellipse
             {

@@ -11,7 +11,7 @@ namespace School_Project_2019_2020
         {
             float Diametr = Convert.ToSingle(TextBox1_Grid1_1.Text);
             float Radius = Convert.ToSingle(TextBox2_Grid1_1.Text);
-            //TextBlock_1.Text = MarkerSpawn.Elements
+            TextBlock_1.Text = Convert.ToString(MarkerSpawn.Elements.Length);
             Timer.NewTimer(Circle, GridNull, Diametr, Radius);
         }
     }

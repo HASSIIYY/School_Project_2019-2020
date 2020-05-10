@@ -9,13 +9,15 @@ namespace ClassLibraryProject
 {
     public class NewObjects
     {
-        private static float Deg = (float)-0.125; // Начальный угол
-        private static int Count = -1;            // Начальный счётчик
+        private static float Deg = -1 * Convert.ToSingle((180 * Timer.Diameter) / (Math.PI * Timer.Radius));    // Начальный угол
+        private static int Count = -1;                                                                          // Начальный счётчик
+        private static float Distance = Timer.Diameter;                                                         // Диаметр
+
         public static void Circle()
         {
-            Deg += (float)0.125; Count++;
-            if (Deg >= 540) Timer.Enabled = true;
-            MarkerSpawn.Tochka(Timer.Diameter, Timer.Radius, Deg, Count);
+            Deg += Convert.ToSingle((180 * Timer.Diameter) / (Math.PI * Timer.Radius)); ; Count++;
+            if (Deg >= 360) Timer.Enabled = true;
+            MarkerSpawn.Tochka(Distance, Timer.Radius, Deg, Count);
         }
     }
 }
