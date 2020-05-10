@@ -23,7 +23,7 @@ namespace ClassLibraryProject
 
             TimerCount.Interval = TimeSpan.FromTicks(1);
             TimerCount.Tick += TimerTicker;
-            TimerCount.Start();
+            if (Enabled == false) TimerCount.Start();
         }
         private static void TimerTicker(object sender, EventArgs e)
         {

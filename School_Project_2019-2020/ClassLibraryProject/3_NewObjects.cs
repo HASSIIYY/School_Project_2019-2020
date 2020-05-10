@@ -16,7 +16,12 @@ namespace ClassLibraryProject
         public static void Circle()
         {
             Deg += Convert.ToSingle((180 * Timer.Diameter) / (Math.PI * Timer.Radius)); ; Count++;
-            if (Deg >= 360) Timer.Enabled = true;
+            if (Deg >= 360)
+            {
+                //Deg = -1 * Convert.ToSingle((180 * Timer.Diameter) / (Math.PI * Timer.Radius));
+                Timer.Enabled = true;
+            }
+
             MarkerSpawn.Tochka(Distance, Timer.Radius, Deg, Count);
         }
     }
