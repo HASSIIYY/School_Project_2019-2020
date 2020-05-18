@@ -52,7 +52,7 @@
                          Width="{Binding ActualWidth, ElementName=Grid1_1, Mode=OneWay}"
                          Height="50" Background="#FF616161"
                          Content="Сбросить"
-                         VerticalAlignment="Bottom"
+                         VerticalAlignment="Bottom" Click="Button2_Grid1_1_Click"
                         />
                 <StackPanel 
                             Margin="0,50,0,0"
